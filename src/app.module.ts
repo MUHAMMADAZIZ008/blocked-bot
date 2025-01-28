@@ -7,6 +7,10 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [
     MongooseModule.forRoot(
       'mongodb+srv://muhammadaziz:Mm08gulomov@cluster0.or776.mongodb.net/<blocked-user>?retryWrites=true&w=majority',
+      {
+        retryAttempts: 5,
+        retryDelay: 3000,
+      },
     ),
     BotModule,
     ScheduleModule.forRoot(),
