@@ -30,7 +30,7 @@ export class BotService implements OnModuleInit {
     const chatId = ctx.message?.chat?.id;
 
     const messageId = ctx.message?.message_id; // Xabar ID'sini olish
-    console.log(ctx);
+    // console.log(ctx);
 
     const now = new Date();
     const currentHour = now.getHours();
