@@ -82,7 +82,7 @@ export class BotService implements OnModuleInit {
         user.telegram_id !== 5456276170
       ) {
         try {
-          if (user.limit === 0) {
+          if (user.limit < 0) {
             await this.kickUser(user.telegram_id);
           } else {
             this.sendWarning(user);
@@ -112,7 +112,7 @@ export class BotService implements OnModuleInit {
   }
 
   // @Cron('*/2 * * * * *')
-  @Cron('0 7 * * *')
+  @Cron('0 2 * * *')
   handleCron() {
     this.checkInactiveUsers();
   }
