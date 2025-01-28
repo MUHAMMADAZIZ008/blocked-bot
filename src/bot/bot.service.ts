@@ -47,7 +47,7 @@ export class BotService implements OnModuleInit {
         telegram_id: user.id,
         last_active: Date.now(),
         chat_id: chatId,
-        limit: 3, // Cheklovni qo'shish
+        limit: 4, // Cheklovni qo'shish
       };
       await this.userModel.create(newUser);
     }
