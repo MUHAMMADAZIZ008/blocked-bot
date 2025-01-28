@@ -52,7 +52,10 @@ export class BotService implements OnModuleInit {
       await this.userModel.create(newUser);
     }
     if (currentUser) {
-      if (currentHour === 6 && currentMinute >= 0 && currentMinute <= 10) {
+      if (
+        (currentHour === 5 && currentMinute >= 0) ||
+        (currentHour === 6 && currentMinute <= 10)
+      ) {
         await this.userModel.updateOne(
           { telegram_id: currentUser.telegram_id },
           { last_active: now },
