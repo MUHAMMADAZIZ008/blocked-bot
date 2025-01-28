@@ -7,8 +7,8 @@ import { TelegrafModule } from 'nestjs-telegraf';
 @Module({
   imports: [
     TelegrafModule.forRoot({
-      token: '7699328433:AAFx_QfMSzoGIzv-PzmD_6dW6OX8tmBAOFA', // Telegram bot tokenini bu yerga yozing
-    }),
+      token: '7862835353:AAEULWJaydANcAb96QWxdtTOlx3XvN1iroU', // Telegram bot tokenini bu yerga yozing
+    }), //7862835353:AAEULWJaydANcAb96QWxdtTOlx3XvN1iroU // 7699328433:AAFx_QfMSzoGIzv-PzmD_6dW6OX8tmBAOFA
     MongooseModule.forFeature([{ name: Users.name, schema: UserSchema }]),
   ],
   providers: [BotService],

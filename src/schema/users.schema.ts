@@ -22,6 +22,9 @@ export class Users {
 
   @Prop()
   chat_id: string;
+
+  @Prop({ default: 3 })
+  limit: number;
 }
 
 export const UserSchema = SchemaFactory.createForClass(Users);
