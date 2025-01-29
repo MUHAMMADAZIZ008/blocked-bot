@@ -18,7 +18,7 @@ export class Users {
   telegram_id: number;
 
   @Prop()
-  last_active: number;
+  last_active: Date;
 
   @Prop()
   chat_id: string;

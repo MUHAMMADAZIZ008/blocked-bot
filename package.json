@@ -25,6 +25,7 @@
     "@nestjs/mongoose": "^11.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/schedule": "^5.0.1",
+    "@telegraf/types": "^8.2.0",
     "mongoose": "^8.9.5",
     "nestjs-telegraf": "^2.8.1",
     "node-fetch": "^3.3.2",
