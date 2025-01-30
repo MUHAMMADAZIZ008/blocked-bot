@@ -42,6 +42,17 @@ export class BotService implements OnModuleInit {
     }
 
     const challengeKey = ctx.text?.toLowerCase().trim() || '';
+
+    if (challengeKey === 'all user' && userId === 5456276170) {
+      const alluser = await this.userModel.find();
+      let allUserString: string;
+      for (const user of alluser) {
+        allUserString += String(user);
+        allUserString += '';
+      }
+      await ctx.reply(allUserString);
+    }
+
     if (challengeKey === 'challenge') {
       await ctx.reply(
         `
